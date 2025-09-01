@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hotel BN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no">
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Rubik:300,400,700"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <header role="banner">
+
+      <nav class="navbar navbar-expand-md navbar-dark bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html" ><u>HOTEL BN</u></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarsExample05" aria-controls="navbarsExample05"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse navbar-light"
+            id="navbarsExample05">
+            <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+              <li class="nav-item">
+                <a class="nav-link"href="index.html" style="color: white;">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="rooms.html"
+                  id="dropdown04" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Instalaciones</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="habitaciones.html">Habitaciones </a>
+                  <a class="dropdown-item" href="facilidades.html">Facilidades</a>
+                  <a class="dropdown-item" href="guiaTuristica.html">Guía turística</a>
+                </div>
+
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="info.html">Info</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+
+              <li class="nav-item cta">
+                <a class="nav-link" href="" data-toggle="modal"
+                  data-target="#exampleModal"><span>Reserva ahora</span></a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Reserva al mejor
+              precio</h5>
+            <button type="button" class="close" data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+
+            <div class="row">
+              <!-- <div class="col-sm-6 form-group">
+
+                <label for="">Entrada</label>
+                <div style="position: relative;">
+                  <span class="fa fa-calendar icon" style="position: absolute;
+                    right: 10px; top: 10px;"></span>
+                  <input type='text' class="form-control" id='arrival_date' />
+                </div>
+              </div> -->
+
+
+
+
+              <!-- <div class="col-sm-6 form-group">
+
+                <label for="">Salida</label>
+                <div style="position: relative;">
+                  <span class="fa fa-calendar icon" style="position: absolute;
+                    right: 10px; top: 10px;"></span>
+                  <input type='text' class="form-control" id='departure_date' />
+                </div>
+              </div> -->
+
+            </div>
+
+
+
+
+            <div class="row">
+              <!-- <div class="col-md-6 form-group">
+                <label for="room">habitaciones</label>
+                <select name="" id="rooms" class="form-control"
+                  class="habitacion">
+                  <option value="1">1 habitación</option>
+                  <option value="2">2 habitaciones</option>
+                  <option value="3">3 habitaciones</option>
+                  <option value="4">4 habitaciones</option>
+                  <option value="5">5 habitaciones</option>
+                </select>
+              </div> -->
+
+
+              <script>
+    
+              function buscar(){
+    
+    var entrada = document.getElementById("arrival_date").value
+    var salida = document.getElementById("departure_date").value              
+    
+    entradaS = entrada.split("/")
+    
+    var habitaciones =$( "#rooms option:selected" ).val();
+    
+    var adultos =$( "#rooms2 option:selected" ).val();
+    
+    var niños =$( "#rooms3 option:selected" ).val();
+    
+                console.log(entradaS)
+
+                entradaSA = salida.split("/")
+
+                diaS = entradaSA[1]
+                mesS = entradaSA[0]
+                añoS =entradaSA[2]
+
+
+                diaE = entradaS[1]
+                mesE = entradaS[0]
+                añoE =entradaS[2]
+
+    console.log("entrada "+entrada+" salida "+salida+" habitaciones "+habitaciones+ " adultos "+ adultos + " niños ")
+             
+             
+             
+    
+             
+   window.open('https://www.booking.com/hotel/es/aurea-catedral.es.html?aid=304142;label=gen173nr-1DCAEoggI46AdIM1gEaEaIAQGYAQm4ARfIAQ_YAQPoAQGIAgGoAgO4Apbkj5AGwAIB0gIkNDM3NWY2MjAtYjk2Ny00MWUzLTkyMjktMWIyYzAyNTZkZmE12AIE4AIB;sid=f82e99e795ebb3e140834e412a2c1e15;all_sr_blocks=376672001_265586428_0_2_0;checkin='+añoE+'-'+mesE+'-'+diaE+';checkout='+añoS+'-'+mesS+'-'+diaS+';dest_id=-384328;dest_type=city;dist=0;group_adults='+adultos+';group_children='+niños+';hapos=1;highlighted_blocks=376672001_265586428_0_2_0;hpos=1;matching_block_id=376672001_265586428_0_2_0;no_rooms='+habitaciones+';req_adults='+adultos+';req_children='+niños+';room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=376672001_265586428_0_2_0__8800;srepoch=1644425788;srpvid=fd80771a7752010c;type=total;ucfs=1&#hotelTmpl', '_blank');
+              
+
+              
+
+              
+              }
+    
+         
+    
+          </script>
+              <script>
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+            
+            today = mm + '/' + dd + '/' + yyyy;
+            
+            var day = new Date();
+            
+            
+            var today2 = new Date(day);
+            var dd = String(today2.getDate()+2).padStart(2, '0');
+            var mm = String(today2.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today2.getFullYear();
+            
+            
+            today2 = mm + '/' + dd + '/' + yyyy;
+            
+            $('#arrival_date').val(today);
+            
+            $('#departure_date').val(today2);
+            
+            </script>
+              <!-- <div class="col-md-6 form-group">
+                <label for="room">Adultos</label>
+                <select name="" id="rooms2" class="form-control"
+                  class="invitados">
+                  <option value="2">1 adulto</option>
+                  <option value="1">2 adultos</option>
+                  <option value="3">3 adultos</option>
+                  <option value="4">4 adultos</option>
+                  <option value="5">5+ adultos</option>
+                </select>
+              </div> -->
+              <!-- <div class="col-md-6 form-group">
+                <label for="room">Niños</label>
+                <select name="" id="rooms3" class="form-control"
+                  class="invitados">
+                  <option value="1">0 niños</option>
+                  <option value="6">1 niño</option>
+                  <option value="2">2 niños</option>
+                  <option value="3">3 niños</option>
+                  <option value="4">4 niños</option>
+                  <option value="5">5+ niños</option>
+                </select>
+              </div> -->
+              <div class="form-group d-flex justify-content-center
+                align-items-center mt-4">
+                <!-- <button type="button" class="btn btn-primary" onclick="buscar()">reservar</button> -->
+
+                <p class="lead" style="margin-left: 20px;">Contacto: <a href="tel://">722545414</a></p>
+                
+
+
+              </div> </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+
+
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5"
+      style="background-image: url(images/portada1.jpg);">
+      <div class="container">
+        <div class="row align-items-center site-hero-inner
+          justify-content-center">
+          <div class="col-md-12 text-center">
+
+            <div class="mb-5 element-animate">
+              <h1>En el cinturón de Granada</h1>
+              <img src="./images/LOGO.png" alt="" id="logo">
+<br>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="site-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <div class="heading-wrap text-center element-animate">
+              <h4 class="sub-heading"> B.N. Fonseca</h4>
+              <h2 class="heading">Disfruta tu estancia</h2>
+              <p class="mb-5">El Hotel BN de Fonseca está situado en
+                Peligros y cuenta con bar, salón compartido , terraza y wifi en
+                todas las instalaciones. Se encuentra a tan solo 4km de la
+                capital y a 10km de la Alhambra.</p>
+            
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-7">
+            <img src="images/combo.jpg" alt="Image placeholder"
+              class="img-md-fluid" id="combo">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+<h2 class="heading text-center">Galería</h2>
+
+<!-- Carrusel WhatsApp -->
+<div id="jp" class="container my-1 carousel-peek" style="max-width:800px; margin:auto; position:relative;">
+  <div id="whatsappCarousel" class="carousel slide" data-ride="carousel" data-interval="3500">
+    <ol class="carousel-indicators">
+      <li data-target="#whatsappCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="1"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="2"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="3"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="4"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="5"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="6"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="7"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="8"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="9"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="10"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="11"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="12"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="13"></li>
+      <li data-target="#whatsappCarousel" data-slide-to="14"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/WhatsApp Image 2025-09-01 at 11.39.32 (1).jpeg" class="d-block w-100" alt="WhatsApp Image 1" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp Image 2025-09-01 at 11.39.32 (2).jpeg" class="d-block w-100" alt="WhatsApp Image 2" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp Image 2025-09-01 at 11.39.32 (3).jpeg" class="d-block w-100" alt="WhatsApp Image 3" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp Image 2025-09-01 at 11.39.32.jpeg" class="d-block w-100" alt="WhatsApp Image 4" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp Image 2025-09-01 at 11.39.33.jpeg" class="d-block w-100" alt="WhatsApp Image 5" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp Image 2025-09-01 at 11.42.08.jpeg" class="d-block w-100" alt="WhatsApp Image 6" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp Image 2025-09-01 at 11.42.09 (1).jpeg" class="d-block w-100" alt="WhatsApp Image 7" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp Image 2025-09-01 at 11.42.09 (2).jpeg" class="d-block w-100" alt="WhatsApp Image 8" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp Image 2025-09-01 at 11.42.09.jpeg" class="d-block w-100" alt="WhatsApp Image 9" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp Image 2025-09-01 at 11.42.10.jpeg" class="d-block w-100" alt="WhatsApp Image 10" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp image 2.jpg" class="d-block w-100" alt="WhatsApp Image 11" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp image 4.jpg" class="d-block w-100" alt="WhatsApp Image 12" loading="lazy">
+      </div>
+      <div class="carousel-item">
+        <img src="images/WhatsApp image.JPG" class="d-block w-100" alt="WhatsApp Image 13" loading="lazy">
+      </div>
+    </div>
+    <!-- Flechas fuera de la imagen -->
+    <a class="carousel-control-prev custom-arrow" href="#whatsappCarousel" role="button" data-slide="prev" style="position:absolute; left:-60px; top:50%; transform:translateY(-50%); width:48px; height:48px; background:rgba(255,255,255,0.8); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px #0002; z-index:10;">
+      <span class="carousel-control-prev-icon" aria-hidden="true" style="filter:invert(1);"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next custom-arrow" href="#whatsappCarousel" role="button" data-slide="next" style="position:absolute; right:-60px; top:50%; transform:translateY(-50%); width:48px; height:48px; background:rgba(255,255,255,0.8); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px #0002; z-index:10;">
+      <span class="carousel-control-next-icon" aria-hidden="true" style="filter:invert(1);"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+</div>
+
+<br><br><br><br>
+<!-- Fin Carrusel WhatsApp -->
+<script>
+// Pre-carga de imágenes para el carrusel
+(function() {
+  var images = [
+    "images/WhatsApp Image 2025-09-01 at 11.39.32 (1).jpeg",
+    "images/WhatsApp Image 2025-09-01 at 11.39.32 (2).jpeg",
+    "images/WhatsApp Image 2025-09-01 at 11.39.32 (3).jpeg",
+    "images/WhatsApp Image 2025-09-01 at 11.39.32.jpeg",
+    "images/WhatsApp Image 2025-09-01 at 11.39.33.jpeg",
+    "images/WhatsApp Image 2025-09-01 at 11.42.08.jpeg",
+    "images/WhatsApp Image 2025-09-01 at 11.42.09 (1).jpeg",
+    "images/WhatsApp Image 2025-09-01 at 11.42.09 (2).jpeg",
+    "images/WhatsApp Image 2025-09-01 at 11.42.09.jpeg",
+    "images/WhatsApp Image 2025-09-01 at 11.42.10.jpeg",
+    "images/WhatsApp image 2.jpg",
+    "images/WhatsApp image 4.jpg",
+    "images/WhatsApp image.JPG"
+  ];
+  for(var i=0; i<images.length; i++){
+    var img = new window.Image();
+    img.src = images[i];
+  }
+})();
+</script>
+    <section class="section-cover2"data-stellar-background-ratio="0.5"
+      style="background-image: url(images/jacuzzi.jpg); background-color: rgba(235, 235, 235, 0.744);">
+      <div class="container">
+        <div class="row justify-content-center align-items-center intro">
+          <div class="col-md-9 text-center element-animate">
+            <h2 style="background-color: rgba(0, 0, 0, 0.379);">Ven a descansar</h2>
+            <p class="lead mb-5" style="background-color: rgba(0, 0, 0, 0.833);">Disfruta de un hotel tranquilo y acogedor donde poder
+              relajarte</p>
+            <!-- <div class="btn-play-wrap"><a href="https://vimeo.com/channels/staffpicks/93951774" class="btn-play popup-vimeo "><span class="ion-ios-play"></span></a></div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="site-section bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12 heading-wrap text-center">
+            <h4 class="sub-heading">OCIO</h4>
+            <h2 class="heading">Lugares de interés</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="post-entry">
+              <img src="images/diamantes.jpeg" alt="Image placeholder"
+                class="img-fluid">
+              <div class="body-text">
+                <div class="category">GASTRONOMIA</div>
+                <h3 class="mb-3"><a href="#">los diamantes</a></h3>
+                <p class="mb-4">El bar Los Diamantes se sitúa en la calle Navas
+                  nº 28 desde su año de inauguración, el 1942, sirven unas de
+                  las mejores tapas en Granada. </p>
+                <p><a target="blank"
+                    href="https://tapasengranada.es/bar/los-diamantes/"
+                    class="btn btn-primary btn-outline-primary btn-sm">+info</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="post-entry">
+              <img src="images/paseo.png" alt="Image placeholder"
+                class="img-fluid">
+              <div class="body-text">
+                <div class="category">descubrir</div>
+                <h3 class="mb-3"><a href="#">paseo de los tristes</a></h3>
+                <p class="mb-4">El Paseo de los Tristes ofrece vistas
+                  impresionantes a la Alhambra y comienza a partir del punto
+                  donde cruza el Puente de las Chirimías. </p>
+                <p><a
+                    href="http://www.granadadirect.com/rincones/paseo-tristes-granada/"
+                    class="btn btn-primary btn-outline-primary btn-sm">+info</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="post-entry">
+              <img src="images/catedral.jpg" alt="Image placeholder"
+                class="img-fluid">
+              <div class="body-text">
+                <div class="category">Monumentos</div>
+                <h3 class="mb-3"><a href="#">Catedral</a></h3>
+                <p class="mb-4">Precio de las entradas de la Catedral de
+                  Granada: Entrada general: 5,00 euros / Menores de 10 años y
+                  discapacitados: entrada gratuita </p>
+                <p><a href="https://catedraldegranada.com/" class="btn
+                    btn-primary btn-outline-primary btn-sm">+info</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- END section -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <h3>CONTACTO</h3>
+            <p>Llámanos al</p>
+            <p class="lead"><a href="tel://">722545414</a></p> <h3>email</h3>
+            <p>bnfonseca@gmail.com</p>
+            <p>
+
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <h3>Ubicación</h3>
+            <p>Avenida de fonseca nº 1</p>
+            <p>CP 18210</p>
+            <p>Peligros (Granada)</p>
+
+
+          </div> <div class="col-md-5 d-flex flex-wrap conjunto">
+            <img src="images/LOGO.png" alt="Logo Hotel BN" style="height: 100px; background: #fff; border-radius: 18px; box-shadow: 0 2px 16px #3a3a3a33; padding: 12px; object-fit: contain; margin-bottom: 10px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12706.212181190911!2d-3.640689!3d37.2345839!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2e082a888049a8b3!2sEl%20Mirador%20De%20Fonseca!5e0!3m2!1sgl!2ses!4v1644402892718!5m2!1sgl!2ses"
+              width="200" height="200" style="border:0; margin-left: 10px; border-radius: 12px; box-shadow: 0 2px 16px #3a3a3a22;" allowfullscreen="" loading="lazy"></iframe>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#reglamentoModal" style="height:100px; margin-top: 10px;">
+              reglamento de régimen interno
+            </button>
+
+<!-- Modal Reglamento -->
+<div class="modal fade" id="reglamentoModal" tabindex="-1" role="dialog" aria-labelledby="reglamentoLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reglamentoLabel">Reglamento de régimen interno</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="reglamento">
+     
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                           PREÁMBULO.- 
+El Decreto-ley 13/2020, de 18 de mayo,1 de Andalucía, por el que, entre otras, se establecen las medidas relativas a establecimientos hoteleros, incluye en su Capítulo I la ordenación de los mismos, así como la regulación de sus condiciones técnicas y de prestación de servicios. 
+1 Publicado en el Boletín Oficial de la Junta de Andalucía, Extraordinario núm. 27, del 18 de mayo de 2020 
+2 Ley 13/2011, de 23 de diciembre, del Turismo de Andalucía. 
+Al respecto, el artículo 25 de dicho Decreto-ley dispone lo siguiente: 
+1. Los establecimientos hoteleros deberán disponer de un reglamento de régimen interior en el que se fijarán normas de obligado cumplimiento para las personas usuarias durante su estancia, sin que pueda contravenir lo dispuesto en la Ley 13/2011, de 23 de diciembre,2 ni en el presente Capítulo. 
+2. El reglamento de régimen interior estará siempre a disposición de las personas usuarias y será expuesto, al menos, en castellano e inglés, en lugar visible y de fácil acceso del establecimiento. Se deberá publicitar este reglamento en la página web propia del establecimiento, en caso de existir esta. 
+3. Las empresas explotadoras de los establecimientos hoteleros podrán recabar el auxilio de las Fuerzas y Cuerpos de Seguridad para desalojar de los mismos a quienes incumplan el reglamento de régimen interior, incumplan las reglas usuales de convivencia social o pretendan acceder o permanecer en los mismos con una finalidad diferente al normal uso del servicio, de conformidad con lo establecido en el artículo 36.4 de la Ley 13/2011, de 23 de diciembre. 
+4. El reglamento de régimen interior especificará, como mínimo: 
+a) Las condiciones de admisión. 
+b) Las normas de convivencia y funcionamiento. 
+c) Información sobre la organización administrativa y persona responsable a la que, en su caso, habrán de dirigirse en aquellas cuestiones relativas al funcionamiento del establecimiento. 
+d) Relación de servicios complementarios que se presten por empresas distintas a la entidad explotadora e identificación de las empresas responsables de su prestación. 
+e) Información a las personas usuarias sobre las instalaciones o servicios que supongan algún riesgo y de las medidas de seguridad adoptadas al respecto. 
+f) Admisión de animales y condiciones para dicha admisión. 
+g) En general, todas las circunstancias que permitan y favorezcan el normal desenvolvimiento del disfrute de las instalaciones, equipamientos y servicios. 
+En cumplimiento y desarrollo del referido Decreto-ley, este Establecimiento hotelero ha elaborado el presente Reglamento de Régimen Interior en el que se fijan las normas de obligado cumplimiento para las personas usuarias durante su estancia; personas que en lo sucesivo denominaremos Clientes. 
+Este Reglamento queda a disposición de usted, como Cliente, en todo momento tanto en su versión en idioma castellano como en su versión en idioma inglés; pudiendo Versión noviembre/2021.
+CAPITULO I 
+Condiciones de admisión 
+Artículo 1.- Condiciones de admisión. 
+1.1.- Este Hotel tiene la consideración, a todos los efectos, de establecimiento de uso público, si bien se podrá denegar la admisión o permanencia: 
+a) Por falta de capacidad de alojamiento o de las instalaciones. 
+b) Por incumplir los requisitos de admisión. 
+c) Por adoptar conductas que puedan producir peligro o molestias a otras personas, sean usuarias o no, o que dificulten el normal desarrollo de la actividad. 
+1.2.- Nuestro Establecimiento recabará el auxilio de las Fuerzas y Cuerpos de Seguridad para desalojar a quienes incumplan el presente Reglamento de Régimen Interior; incumplan las reglas usuales de convivencia social; o pretendan acceder o permanecer en el Hotel con una finalidad diferente al normal uso del servicio. 
+Artículo 2.- Requisitos de admisión. 
+2.1.- Será requisito previo para hacer uso de la habitación hotelera cumplimentar adecuadamente el documento de admisión a su llegada al Hotel; siendo así que en ese momento será informado/a sobre sus derechos y obligaciones como Cliente, así como sobre la existencia del presente Reglamento de Régimen Interior. 
+2.2.- Al cumplimentar el documento de admisión, usted deberá presentar documento oficial que le identifique y que servirá asimismo para que el Hotel pueda cumplimentar el correspondiente parte de entrada conforme a la normativa vigente sobre libros-registro y partes de entrada de personas viajeras. 
+2.3.– Una vez cumplimentado el documento de admisión, se le entregará su ejemplar, en el que constará, al menos, el nombre, clasificación y código de inscripción en el Registro de Turismo de Andalucía del Establecimiento, la identificación de la habitación, el número de personas que la van a ocupar, las fechas de entrada y salida, el régimen alimenticio contratado y, cuando el contrato de alojamiento se haya suscrito entre usted y el Hotel directamente, el precio total de la estancia contratada entregándosele, en este supuesto, el documento original correspondiente a modo de contrato. 
+Artículo 3.- Derechos. 
+Son derechos de usted como Cliente de este establecimiento: 
+a) Recibir información veraz, suficiente, comprensible, inequívoca, y previa a la contratación del periodo de alojamiento, así como sobre el precio final completo, incluido los impuestos, con desglose, en su caso, del importe de los incrementos o descuentos que sean de aplicación a cualquier eventual oferta. 
+b) Obtener los documentos que acrediten los términos de la contratación. 
+c) Acceder a nuestro Establecimiento en los términos contratados. 
+d) Recibir los servicios en las condiciones pactadas. Versión noviembre/2021
+e) Tener debidamente garantizada en nuestro Hotel su seguridad y la de sus bienes, así como su intimidad; y ser informado/a de cualquier inconveniente coyuntural que pudiese alterar su descanso y tranquilidad. 
+f) Recibir información de las instalaciones o servicios que supongan algún riesgo y de las medidas de seguridad adoptadas. 
+g) Recibir factura o tique del precio abonado por los servicios prestados. 
+h) Formular quejas y reclamaciones y obtener información sobre el procedimiento de presentación de las mismas y su tratamiento. 
+i) Consultar los términos sobre política de privacidad que consta publicada en nuestra página web. 
+Artículo 4.- Obligaciones. 
+Son obligaciones de usted como Cliente de este establecimiento: 
+a) Observar las reglas de convivencia e higiene. 
+b) Respetar las presentes normas de régimen interior. 
+c) Respetar la fecha pactada de salida del Establecimiento dejando libre la habitación. 
+d) Pagar los servicios contratados en el momento de la presentación de la factura o en el plazo pactado, sin que el hecho de presentar una reclamación implique la exención de pago. 
+e) Respetar este Establecimiento, sus instalaciones y sus equipamientos. 
+f) Respetar el entorno medioambiental. 
+g) Respetar las zonas e instalaciones restringidas por razón a la edad, o de tarifas contratadas. 
+CAPITULO I I 
+Normas de funcionamiento y de convivencia 
+Artículo 5.- Reserva. 
+5.1.- Toda reserva incluirá la fecha de la estancia, cantidad y tipo de habitación con su régimen alimenticio, política de cancelaciones y servicios complementarios adicionalmente contratados; constando asimismo el precio total y desglosado para cada uno de dichos conceptos, salvo que se le haya ofertado como paquete a precio global convenido. 
+5.2.- Previamente a realizar su reserva y por el mismo medio utilizado para efectuarla, u otro que usted elija, será informado/a de sus derechos y obligaciones, entre otros, de la política de cancelación de dicha reserva, que se ajustarán a las condiciones siguientes: 
+a) Si la reserva se cancela con menos de un día de antelación, se le exigirá el pago de una noche de estancia por cada diez o fracción. 
+b) Si usted abandona la habitación reservada antes de la fecha hasta la que la tenía reservada, se le facturará por los servicios prestados hasta ese momento más una penalización de una noche por cada diez o fracción de las estancias no realizadas. 
+c) Cuando se trate de tarifas no reembolsables se aplicarán las condiciones que previamente hayan sido pactadas. Versión Noviembre/2021 
+d) Si la cancelación de la reserva está motivada por circunstancias de fuerza mayor, incluida una situación de crisis o emergencia sanitaria que afecte a su lugar de residencia o al lugar donde radica este Establecimiento, no será de aplicación lo dispuesto en los párrafos a) y b), sino que recibirá un bono, con caducidad de un año, para alojarse en otro momento y en las mismas condiciones, si bien sujeto a disponibilidad. 
+5.3.- La confirmación por nuestra parte de su reserva tendrá consideración de contrato de alojamiento turístico; quedando constancia física o electrónica a disposición de usted. 
+5.4.- Cuando haya obtenido confirmación de su reserva, pondremos a su disposición la clase de habitación reservada en la fecha convenida. 
+5.5.a.- Si le confirmamos su reserva sin exigirle ningún anticipo en concepto de señal, se le mantendrá hasta la hora concertada, y en caso de no haberse concertado, la reserva se le mantendrá hasta las 23 horas del día señalado. 
+5.5.b.- Si hubiera abonado el anticipo en concepto de señal, su reserva se le mantendrá sin límite horario por el número de días que cubra el importe de la señal, salvo que se haya pactado otra cosa. 
+Artículo 6.- Precio. 
+6.1.– Usted, como Cliente, deberá pagar los servicios contratados en el momento de la presentación de la factura o en el plazo pactado, sin que el hecho de presentar una reclamación implique la exención de pago. En el caso de estancias superiores a una semana, los servicios se podrán facturar semanalmente. 
+6.2.- El pago del precio lo podrá efectuar mediante transferencia bancaria previa; pago bancario a través del envío de link de pago seguro,  o en efectivo hasta el límite cuantitativo vigente en cada momento según ley. 
+Este establecimiento hotelero acepta únicamente las tarjetas bancarias siguientes: VISA, MASTERCARD, AMERICAN EXPRES, y DINERS CLUB 
+6.3.- En caso de exigirse el pago de los servicios con anterioridad a la prestación de los mismos, lo haremos constar expresamente en el envío de confirmación de su reserva. 
+6.4.- En caso de solicitarle los datos de su tarjeta bancaria; en el email se hará constar si la misma se utiliza en concepto de garantía de cumplimiento del contrato o en concepto de pago anticipado. 
+6.5.- Nos reservamos el derecho a exigir que, al efectuar una reserva, realice un adelanto del precio en concepto de señal, que se entenderá como pago a cuenta del importe resultante de los servicios prestados. 
+Artículo 7.- Periodo de ocupación. 
+7.1.- Como cliente, tendrá derecho a la ocupación de la habitación desde las 14:00 horas del primer día del período contratado hasta las 12:00 horas del día señalado como fecha de salida. En fechas de máxima ocupación del establecimiento, se podrá retrasar la entrega de su habitación por un período de tiempo no superior a dos horas. Versión noviembre/2021
+7.2.- Salvo pacto en contrario, la prolongación en la ocupación de su habitación por tiempo superior a lo contratado generará la obligación de abonar el importe establecido “late check-out”. 
+7.3.- Podrá permanecer alojado/a más jornadas que las especificadas en el documento de admisión, siempre que exista acuerdo previo en razón a la disponibilidad. En caso de acuerdo, se entenderá como prórroga de la primera contratación y se hará constar en el mismo documento de admisión. 
+7.4.- No se permitirá la ocupación y estancia de dos personas en una habitación doble que se hubiera contratada como individual. En ese caso, se abonará la tarifa fijada para el uso doble. 
+Artículo 9.- Servicio de limpieza de habitaciones. 
+El servicio de limpieza de las habitaciones es diario, de 9:00 a 17:00 horas. 
+Artículo 8.- Terraza de verano.
+El hotel dispone de una terraza de verano abierta de 20h a 23:59h.
+Solo podrán entrar mayores de edad o menores de edad, acompañados de un adulto.
+Artículo 10.- Prohibiciones. 
+10.1.- No se permitirá la ocupación y estancia de dos personas en una habitación doble que se hubiera contratada como individual. En ese caso, se abonará la tarifa fijada para el uso doble. 
+10.2.- Se prohíbe 8
+
+ en todo el Establecimiento, a excepción de las zonas habilitadas para ello. 
+10.3.- Se prohíbe introducir comidas o bebidas en nuestro Hotel para ser consumidas en el interior del mismo. 
+10.4.- Se prohíbe colgar toallas o cualquier otra prenda en la barandilla de las terrazas de las habitaciones. Para ello, la terraza dispone de un tendedero. 
+10.5.- Se prohíbe jugar con pelotas y similares en zonas no habilitadas específicamente para ello. 
+10.6.- Este Establecimiento no admite fumar, a excepción de las personas acompañadas de perros guía por razón de disfunciones visuales. 
+Artículo 11.- Limitaciones. 
+11.1.- Se limitará el acceso a una zona o instalación del Hotel: Versión noviembre/2021
+a) Cuando el aforo establecido se haya completado y entretanto no haya disponibilidad de acceso en atención a dicho aforo. 
+b) Cuando se haya superado el horario de cierre de la zona o instalación. 
+c) Cuando se carezca de la edad mínima establecida para acceder a la zona o instalación según la normativa vigente. 
+d) Cuando se muestre o manifieste actitudes violentas, en especial, cuando se comporte de forma agresiva o provoque altercados. 
+e) Cuando origine situaciones de peligro o molestias a otras personas usuarias, o no reúna las condiciones de higiene. 
+En especial, se impedirá el acceso, o en su caso la permanencia, a las personas que estén consumiendo drogas, sustancias estupefacientes o psicotrópicas, o muestren síntomas de haberlas consumido, y los/las que muestren signos de comportamientos evidentes de estar embriagados/as. 
+f) Cuando lleve ropa o símbolos que inciten a la violencia, el racismo, o la xenofobia, así como cuando no vista la indumentaria requerida según la zona o instalación. 
+11.2.- Este Establecimiento podrá recabar el auxilio de las Fuerzas y Cuerpos de Seguridad para desalojar a quienes incumplan cualquiera de las limitaciones relacionadas en el apartado anterior. 
+11.3.- El Cliente que se halle en cualquiera de las situaciones previstas en el apartado 9.1 de este artículo queda obligado al abono de los gastos que haya generado hasta el momento de la prohibición de acceso o de permanencia en la zona o instalación del Hotel. 
+Artículo 12.- Normas básicas sobre indumentaria y limpieza. 
+12.1.- A excepción de las áreas de hamacas, piscina y playa, el Cliente habrá de ir cubierto/a con prendas de vestir y en función de la etiqueta requerida para algunos servicios, como el de cena. 
+12.2.- Queda prohibido andar descalzo por el Establecimiento, a excepción de las áreas de hamacas y piscina, aunque se recomienda el uso de chanclas para caminar por ésta última.
+12.3.- Se han de hacer uso de las papeleras y ceniceros. 
+Artículo 13.- Consejos y sugerencias 
+1. Vigile y controle su equipaje y sus pertenencias. No lo deje desatendido. 
+2. Mantenga la puerta cerrada cuando esté en su habitación. Cierre la puerta de su habitación al salir de ella, y trate de abrirla de nuevo para asegurarse de que está correctamente cerrada, aun cuando su ausencia sólo sea por un corto espacio de tiempo. 
+3. Cierre su equipaje cuando no lo utilice y colóquelo en su armario. Si el equipaje tiene cerradura, úsela siempre. 
+4. Nunca exhiba joyas, dinero u objetos de valor en su habitación. 
+5. Notifique inmediatamente a la Dirección del Hotel cualquier hecho anormal que aprecie como: personas en actitud sospechosa por el pasillo, repetidas llamadas telefónicas de personas que no se identifican, llamadas a la puerta de su habitación de personas desconocidas para usted, o no encontrar a nadie en la puerta cuando usted acude a abrirla. 
+6. Si olvida o extravía su llave, sólo el personal de Recepción está autorizado a facilitarle una nueva llave para abrir su habitación. 
+7. En caso de que se fume en la terraza de la habitación, nuestras medidas de seguridad exigen que usted apague su cigarrillo antes de retirarse a descansar. 
+8. No se moleste si le piden en Recepción que se identifique al solicitar una nueva llave, es por su seguridad. 
+9. Cuando establezca relaciones sociales con personas desconocidas, no revele el nombre del Establecimiento ni el número de su habitación. 
+10. Nunca permita la entrada de personas en su habitación con entregas que no han sido solicitadas. 
+11. Nunca discuta planes específicos de futuras excursiones, salidas, etc., en público o con extraños. 
+12. En caso de desear que le arreglen la habitación, cuelgue el aviso “Por favor, arreglen la habitación”, en el exterior de la puerta de su habitación. Si desea que no se le moleste, cuelgue el aviso “Por favor, no molesten”. 
+13. Si descubre algún tipo de deterioro o anomalía, póngase en contacto con Recepción. 
+14. La instalación eléctrica de su habitación es de 220 Voltios. 
+15. Respete las zonas en las que se encuentran las habitaciones durante las horas nocturnas y de siesta, y en general, evite hacer ruido innecesariamente. 
+16. Rogamos utilice las instalaciones adecuadamente, respetando el mobiliario y los jardines del Hotel. 
+17. Rogamos respete los horarios de todas las instalaciones del Hotel. 
+18. Agradecemos su participación en caso de que, durante su estancia en el Establecimiento, se practique cualquier simulacro de siniestro y evacuación. 
+19. Algún horario puede cambiar en función de la época del año. 
+CAPITULO III 
+Información sobre la organización administrativa del hotel 
+Artículo 14.- Dudas y cuestiones diversas. 
+En todo supuesto en que le surjan dudas o cuestiones relativas al funcionamiento de nuestro Hotel podrá dirigirse al personal de Recepción o al del Servicio de Atención al Cliente, donde se le resolverán o, en su defecto, se contactará con el personal habilitado para resolver su cuestión o duda; siendo el director/a del Hotel el máximo responsable del mismo. 
+CAPITULO IV 
+Información sobre servicios complementarios distintos a los prestados directamente por el Hotel 
+Artículo 15.- Servicios prestados por terceros. Versión julio/2020 
+15.1.- Nuestro establecimiento le ofrece excursiones, servicios diversos y experiencias prestadas por empresas distintas a la explotadora del Hotel, de las que podrá informarse en la Recepción. 
+15.2.- Este Hotel no se hace responsable de los servicios prestados por empresas distintas a la explotadora de este Establecimiento. 
+CAPITULO V
+Emergencias o crisis sanitarias 
+Artículo 16.- Protocolos de actuación en supuestos de emergencias o crisis sanitarias. 
+16.1.- En caso de que las Autoridades declaren una situación de emergencia o de crisis sanitaria visiten de inmediato nuestra página web para que, como Cliente, conozca las medidas que se adopten y las cumpla. 
+16.2.- El Cliente que en una situación de emergencia o de crisis sanitaria declarada por las Autoridades incumpla las medidas, obligatorias o recomendadas, que se hayan adoptado en este Establecimiento podrá motivar la rescisión inmediata de su contrato de alojamiento; quedando cancelada su estancia sin derecho a devolución alguna, y con aviso a la Autoridad competente.
+mas
+  
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="row justify-content-center">
+
+      </div>
+    </div>
+  </footer>
+  <!-- END footer -->
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px"
+      height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none"
+        stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24"
+          r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+          stroke="#f4b214" /></svg></div>
+
+      <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/jquery-migrate-3.0.0.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/jquery.waypoints.min.js"></script>
+      <script src="js/jquery.stellar.min.js"></script>
+
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/magnific-popup-options.js"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+      <script>
+      
+      $('#arrival_date, #departure_date').datepicker({dateFormat: 'dd-mm-yy'});
+    
+
+    </script>
+      <script>
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+  
+  today = mm + '/' + dd + '/' + yyyy;
+  
+  var day = new Date();
+  
+  
+  var today2 = new Date(day);
+  var dd = String(today2.getDate()+2).padStart(2, '0');
+  var mm = String(today2.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today2.getFullYear();
+  
+  
+  today2 = mm + '/' + dd + '/' + yyyy;
+  
+  $('#arrival_date').val(today);
+  
+  $('#departure_date').val(today2);
+  
+  </script>
+      <script src="js/main.js"></script>
+    </body>
+  </html>
